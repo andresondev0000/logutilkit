@@ -1,7 +1,9 @@
 README.md
+setup.cfg
 setup.py
 logutilkit/__init__.py
 logutilkit/logger.py
+logutilkit/logutilkit_util.py
 logutilkit.egg-info/PKG-INFO
 logutilkit.egg-info/SOURCES.txt
 logutilkit.egg-info/dependency_links.txt

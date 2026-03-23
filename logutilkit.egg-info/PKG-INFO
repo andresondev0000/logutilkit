@@ -1,151 +1,156 @@
-Metadata-Version: 2.1
+Metadata-Version: 2.4
 Name: logutilkit
-Version: 0.52
+Version: 1.0.1
 Summary: A small log package
-Home-page: https://github.com/Tinywan/logutilkit
-Author: Tinywan
-Author-email: 756684177@qq.com
-License: UNKNOWN
-Description: # LogUtilKit
-        
-        A simple Python logging package with rotating file handlers and console output.
-        
-        ## Requirements
-        
-        ```
-        python > 3.5
-        ```
-        
-        ## Installation
-        
-        ```bash
-        pip install logutilkit
-        ```
-        
-        ## Usage
-        
-        ```python
-        #!/usr/bin/python3
-        
-        from logutilkit import logger
-        
-        log = logger.logger()
-        
-        log.critical("This is a critical level message!")
-        log.error("This is an error level message!")
-        log.warning("This is a warning level message!")
-        log.info("This is an info level message!")
-        log.debug("This is a debug level message!")
-        ```
-        
-        ## Package Management
-        
-        ### Install
-        ```bash
-        pip install logutilkit
-        ```
-        
-        ### Upgrade
-        ```bash
-        pip install --upgrade logutilkit
-        ```
-        
-        ### Uninstall
-        ```bash
-        pip uninstall logutilkit
-        ```
-        
-        ### Search
-        ```bash
-        pip search logutilkit
-        ```
-        
-        ## Development Guide
-        
-        ### Building the Package
-        
-        1. Install the latest versions of `setuptools` and `wheel`:
-        ```bash
-        python3 -m pip install --user --upgrade setuptools wheel
-        ```
-        
-        2. Run this command from the same directory where `setup.py` is located:
-        ```bash
-        python3 setup.py sdist bdist_wheel
-        ```
-        
-        3. This command will generate two files in the `dist` directory:
-        ```
-        dist/
-          logutilkit-0.52-py3-none-any.whl
-          logutilkit-0.52.tar.gz
-        ```
-        
-        The `.tar.gz` file is the source archive, and the `.whl` file is the built distribution.
-        
-        ### Publishing the Package
-        
-        Use twine to upload the distribution packages. First, install Twine:
-        ```bash
-        python3 -m pip install --user --upgrade twine
-        ```
-        
-        > Note: On Windows, configure your environment variables and restart your terminal if needed.
-        
-        Rebuild the package:
-        ```bash
-        python3 setup.py sdist bdist_wheel
-        ```
-        
-        Upload all archives in the dist directory using Twine:
-        ```bash
-        twine upload dist/*
-        ```
-        
-        You will be prompted to enter your PyPI username and password. After completion, you should see output similar to:
-        ```
-        Enter your username: Tinywan
-        Enter your password:
-        Uploading distributions to https://upload.pypi.org/legacy/
-        Uploading logutilkit-0.52-py3-none-any.whl
-        100%|████████████████████████████████████| 10.5k/10.5k [00:03<00:00, 3.31kB/s]
-        Uploading logutilkit-0.52.tar.gz
-        100%|████████████████████████████████████| 9.50k/9.50k [00:01<00:00, 9.24kB/s]
-        ```
-        
-        ## Common Issues
-        
-        ### UnicodeDecodeError
-        ```
-        UnicodeDecodeError: 'gbk' codec can't decode byte 0x80 in position 197: illegal multibyte sequence
-        ```
-        
-        Solutions:
-        - Solution 1: `FILE_OBJECT = open('order.log', 'r', encoding='UTF-8')`
-        - Solution 2: `FILE_OBJECT = open('order.log', 'rb')`
-        
-        ### Twine Command Not Found
-        ```
-        twine : The term 'twine' is not recognized as a cmdlet, function, script file, or operable program.
-        ```
-        
-        Configure your environment variables to include the Python Scripts directory.
-        
-        ## Resources
-        
-        - Official Packaging Tutorial: https://packaging.python.org/tutorials/packaging-projects/
-        - PyPI Account Management: https://pypi.org/manage/account/
-        
-        ## License
-        
-        MIT License
-        
-        ## Author
-        
-        Tinywan (756684177@qq.com)
-        
-Platform: UNKNOWN
+Home-page: https://github.com/andresondev0000/logutilkit
+Author: andresondev0000
+Author-email: shiningup1996@gmail.com
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Operating System :: OS Independent
 Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: summary
+
+# LogUtilKit
+
+A simple Python logging package with rotating file handlers and console output.
+
+## Requirements
+
+```
+python > 3.5
+```
+
+## Installation
+
+```bash
+pip install logutilkit
+```
+
+## Usage
+
+```python
+#!/usr/bin/python3
+
+from logutilkit import logger
+
+log = logger.logger()
+
+log.critical("This is a critical level message!")
+log.error("This is an error level message!")
+log.warning("This is a warning level message!")
+log.info("This is an info level message!")
+log.debug("This is a debug level message!")
+```
+
+## Package Management
+
+### Install
+```bash
+pip install logutilkit
+```
+
+### Upgrade
+```bash
+pip install --upgrade logutilkit
+```
+
+### Uninstall
+```bash
+pip uninstall logutilkit
+```
+
+### Search
+```bash
+pip search logutilkit
+```
+
+## Development Guide
+
+### Building the Package
+
+1. Install the latest versions of `setuptools` and `wheel`:
+```bash
+python3 -m pip install --user --upgrade setuptools wheel
+```
+
+2. Run this command from the same directory where `setup.py` is located:
+```bash
+python3 setup.py sdist bdist_wheel
+```
+
+3. This command will generate two files in the `dist` directory:
+```
+dist/
+  logutilkit-0.52-py3-none-any.whl
+  logutilkit-0.52.tar.gz
+```
+
+The `.tar.gz` file is the source archive, and the `.whl` file is the built distribution.
+
+### Publishing the Package
+
+Use twine to upload the distribution packages. First, install Twine:
+```bash
+python3 -m pip install --user --upgrade twine
+```
+
+> Note: On Windows, configure your environment variables and restart your terminal if needed.
+
+Rebuild the package:
+```bash
+python3 setup.py sdist bdist_wheel
+```
+
+Upload all archives in the dist directory using Twine:
+```bash
+twine upload dist/*
+```
+
+You will be prompted to enter your PyPI username and password. After completion, you should see output similar to:
+```
+Enter your username: Tinywan
+Enter your password:
+Uploading distributions to https://upload.pypi.org/legacy/
+Uploading logutilkit-0.52-py3-none-any.whl
+100%|████████████████████████████████████| 10.5k/10.5k [00:03<00:00, 3.31kB/s]
+Uploading logutilkit-0.52.tar.gz
+100%|████████████████████████████████████| 9.50k/9.50k [00:01<00:00, 9.24kB/s]
+```
+
+## Common Issues
+
+### UnicodeDecodeError
+```
+UnicodeDecodeError: 'gbk' codec can't decode byte 0x80 in position 197: illegal multibyte sequence
+```
+
+Solutions:
+- Solution 1: `FILE_OBJECT = open('order.log', 'r', encoding='UTF-8')`
+- Solution 2: `FILE_OBJECT = open('order.log', 'rb')`
+
+### Twine Command Not Found
+```
+twine : The term 'twine' is not recognized as a cmdlet, function, script file, or operable program.
+```
+
+Configure your environment variables to include the Python Scripts directory.
+
+## Resources
+
+- Official Packaging Tutorial: https://packaging.python.org/tutorials/packaging-projects/
+- PyPI Account Management: https://pypi.org/manage/account/
+
+## License
+
+MIT License
+
+## Author
+
+Tinywan (756684177@qq.com)
