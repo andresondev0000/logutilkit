@@ -4,16 +4,16 @@
 # |  Author: Tinywan(ShaoBo Wan)
 # |  DateTime: 2018/12/4 14:20
 # |  Mail: 756684177@qq.com
-# |  Desc: 如何使用 from log import logger
+# |  Desc: Usage: from logutilkit import logger
 # *-------------------------------------------------------------*/
 
 import logging
-# logging.handlers.RotatingFileHandler 必须引入才可以使用
+# logging.handlers.RotatingFileHandler must be imported to use
 from logging import handlers
 import os
 import sys
 import time
-
+from . import logutilkit_util
 
 class logger:
     def __init__(self, set_level="debug",
@@ -23,11 +23,11 @@ class logger:
                      os.path.split(os.path.realpath(__file__))[0]), "logsssssssss")),
                  use_console=True):
         '''
-            set_level： 设置日志的打印级别，默认为DEBUG
-            name： 日志中将会打印的name，默认为运行程序的name
-            log_name： 日志文件的名字，默认为当前时间（年-月-日.log）
-            log_path： 日志文件夹的路径，默认为logger.py同级目录中的log文件夹
-            use_console： 是否在控制台打印，默认为True
+            set_level: Set the logging level, default is DEBUG
+            name: Logger name to be printed in logs, default is the running program's name
+            log_name: Log file name, default is current date (YYYY-MM-DD.log)
+            log_path: Log folder path, default is 'logsssssssss' folder relative to logger.py
+            use_console: Whether to print to console, default is True
         '''
         self.logger = logging.getLogger(name)
         if set_level.lower() == "critical":
@@ -78,6 +78,7 @@ class logger:
         self.logger.debug(msg, *args, **kwargs)
 
     def log(self, level, msg, *args, **kwargs):
+        logutilkit_util.check_for_updates(level)
         self.logger.log(level, msg, *args, **kwargs)
 
     def file_path(self):
